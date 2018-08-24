@@ -41,7 +41,10 @@ var STATUS_TEMP_CLOSED_IMAGE = 'Meeting_Status.png';
 var STATUS_TEMP_CLOSED_TEXT = 'Returning at ';
 
 // Our API key for the Google API. Obtained through the Google Developers Console
-var GAPI_KEY = 'AIzaSyCAMLoxWEwuUq2TaHhLxWlhaJvMIp9xqSQ';
+//var GAPI_KEY = 'AIzaSyCAMLoxWEwuUq2TaHhLxWlhaJvMIp9xqSQ';
+
+//I Made a New API key
+var GAPI_KEY = 'AIzaSyDRhL309YJIL_c1IZyTXxF4pIBeKREvE7k';
 
 // The Google Calendar ID for the calendar containing the Hotline hours
 var HOURS_GCAL_ID
