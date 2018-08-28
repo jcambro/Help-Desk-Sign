@@ -181,15 +181,7 @@ function updateClock() {
  https://developers.google.com/calendar/quickstart/js
 */
 function initApi() {
-
-  //gapi.load("client", nothing_func)
-  //gapi.client.init(apiKey=GAPI_KEY, discoveryDocs=DISCO)
-  //gapi.client.setApiKey(GAPI_KEY);
-
-
   gapi.load('client:auth2', initClient)
-
-  //gapi.client.load('calendar', 'v3', initSchedule);
 }
 
 // John : I made this function myself
