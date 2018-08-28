@@ -3,7 +3,7 @@ This repo is a modified version of the original HotSign. The original instructio
 
 ## What I Did
 * Changed the background image
-* Moved all the <div> in the html file to fit landscape layout
+* Moved all the divides in the html file to fit landscape layout
 * In the signboard file I changed the gapi.client init function to use proper authentication instead of just apiKey
 * Slightly changed the twitter RSS call to be updated
 
