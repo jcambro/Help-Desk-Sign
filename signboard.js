@@ -57,7 +57,7 @@ var CAEN_TWITTER_RSS_URL
 
 // The name of all events in the Google calendar to indicate the hours when the
 // Hotline is open
-var HOTLINE_OPEN_EVENT_NAME = 'Call Center Open';
+var HOTLINE_OPEN_EVENT_NAME = 'Open';
 var HOTLINE_TEMP_CLOSED_EVENT_NAME = 'Meeting'
 
 // What will appear in place of hours on a date on the schedule when the
@@ -174,9 +174,39 @@ function updateClock() {
  * Google Calendar API. Afterwards, calls the function to initialize schedule
  * drawing and updating.
  */
+
+ /*
+ What I have tried so far...
+ https://developers.google.com/api-client-library/javascript/reference/referencedocs#gapiloadlibraries-callbackorconfig
+ https://developers.google.com/calendar/quickstart/js
+*/
 function initApi() {
-  gapi.client.setApiKey(GAPI_KEY);
+
+  //gapi.load("client", nothing_func)
+  //gapi.client.init(apiKey=GAPI_KEY, discoveryDocs=DISCO)
+  //gapi.client.setApiKey(GAPI_KEY);
+
+
+  gapi.load('client:auth2', initClient)
+
+  //gapi.client.load('calendar', 'v3', initSchedule);
+}
+
+// John : I made this function myself
+function initClient(){
+  var CLIENT_ID = "429990460332-k9j5nc0lhpp1uhnpj8ek31s7autsqm2b.apps.googleusercontent.com";
+  var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
+  var DISCOV = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
+
+  gapi.client.init({
+    apiKey: GAPI_KEY,
+    clientId: CLIENT_ID,
+    discoveryDocs: DISCOV,
+    scope: SCOPES
+  });
+
   gapi.client.load('calendar', 'v3', initSchedule);
+
 }
 
 /**
