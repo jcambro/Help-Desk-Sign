@@ -5,7 +5,7 @@ This repo is a modified version of the original HotSign. The original instructio
 * Changed the background image
 * Moved all the divides in the html file to fit landscape layout
 * In the signboard file I changed the gapi.client init function to use proper authentication instead of just apiKey
-* Slightly changed the twitter RSS call to be updated
+* I added a call to initAPI() at the end of the HTML file because I did not see where it was actually was called. You can change this 
 
 ### Differences between the Help Desk and Downstairs Pi
 During development, I tested by opening the html locally in FireFox and NOT using the launch script. This did not update the time table correctly.

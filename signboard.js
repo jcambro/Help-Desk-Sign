@@ -43,7 +43,7 @@ var STATUS_TEMP_CLOSED_TEXT = 'Returning at ';
 // Our API key for the Google API. Obtained through the Google Developers Console
 //var GAPI_KEY = 'AIzaSyCAMLoxWEwuUq2TaHhLxWlhaJvMIp9xqSQ';
 
-//I Made a New API key
+//I(John) Made a New API key
 var GAPI_KEY = 'AIzaSyDRhL309YJIL_c1IZyTXxF4pIBeKREvE7k';
 
 // The Google Calendar ID for the calendar containing the Hotline hours
@@ -184,7 +184,7 @@ function initApi() {
   gapi.load('client:auth2', initClient)
 }
 
-// John : I made this function myself
+// John : I made this function
 function initClient(){
   var CLIENT_ID = "429990460332-k9j5nc0lhpp1uhnpj8ek31s7autsqm2b.apps.googleusercontent.com";
   var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
